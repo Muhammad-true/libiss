@@ -338,14 +338,23 @@ header {
 }
 
 @media (max-width: 719px) {
-  html,
   body {
+    overflow: hidden;
+  }
+
+  .page {
+    height: 100vh;
+  }
+
+  main {
+    height: 100vh;
+    overflow-y: auto;
     scroll-snap-type: y mandatory;
     scroll-padding-top: 72px;
   }
 
   .snap-section {
-    min-height: 100vh;
+    height: 100vh;
     scroll-snap-align: start;
     scroll-snap-stop: always;
     padding-top: 80px;
@@ -645,20 +654,6 @@ footer {
   gap: 16px;
 }
 
-.mobile-cta {
-  position: fixed;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-  display: grid;
-  gap: 10px;
-  padding: 12px;
-  border-radius: 18px;
-  background: color-mix(in srgb, var(--bg) 90%, transparent);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  z-index: 60;
-}
 
 .mobile-cta .btn {
   width: 100%;

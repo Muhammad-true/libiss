@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Libiss API — интеграции для ритейла."
+    />
+    <meta name="theme-color" content="#0b0f0f" />
+    <title>Libiss API</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div class="app-loader" role="status" aria-live="polite">
+      <div class="loader-mark"></div>
+      <div class="loader-text" data-i18n="loader.title">Загрузка</div>
+      <div class="loader-subtext" data-i18n="loader.slow">
+        Медленное соединение, ждем...
+      </div>
+    </div>
+    <div class="page">
+      <header>
+        <div class="container nav">
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-controls="mobileMenu"
+            aria-expanded="false"
+            data-menu-open
+            aria-label="Меню"
+            data-i18n-attr="aria-label"
+            data-i18n-key="menu.open"
+          >
+            <span aria-hidden="true"></span>
+          </button>
+          <a class="logo" href="/" aria-label="Libiss home">
+            <img class="logo-image" src="/src/logo.png" alt="Libiss" />
+            <span>Libiss</span>
+          </a>
+          <nav class="nav-links" aria-label="Primary">
+            <a href="https://pos.libiss.com" data-i18n="services.pos"
+              >Для магазина</a
+            >
+            <a href="/courier.html" data-i18n="services.admin">Курьер</a>
+            <a href="https://shop.libiss.com" data-i18n="services.shop"
+              >Онлайн-магазин</a
+            >
+            <a href="/api.html">API</a>
+          </nav>
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button class="lang-btn is-active" type="button" data-lang="ru">
+              RU
+            </button>
+            <button class="lang-btn" type="button" data-lang="en">EN</button>
+          </div>
+          <div class="nav-cta">
+            <a
+              class="btn btn-secondary"
+              href="https://shop.libiss.com"
+              data-i18n="cta.tryPos"
+              >Онлайн-магазин</a
+            >
+            <a class="btn btn-primary" href="https://pos.libiss.com"
+              data-i18n="cta.start"
+              >Перейти в POS</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <div class="menu-overlay" data-menu-close></div>
+      <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="menu-header">
+          <span class="menu-title" data-i18n="menu.title">Навигация</span>
+          <button
+            class="menu-close"
+            type="button"
+            data-menu-close
+            data-i18n="menu.close"
+          >
+            Закрыть
+          </button>
+        </div>
+        <nav class="menu-links" aria-label="Mobile">
+          <a href="https://pos.libiss.com" data-i18n="services.pos" data-menu-close
+            >Для магазина</a
+          >
+          <a href="/courier.html" data-i18n="services.admin" data-menu-close
+            >Курьер</a
+          >
+          <a href="https://shop.libiss.com" data-i18n="services.shop" data-menu-close
+            >Онлайн-магазин</a
+          >
+          <a href="/api.html" data-menu-close>API</a>
+          <a href="mailto:support@libiss.com" data-i18n="menu.support" data-menu-close
+            >Служба поддержки</a
+          >
+        </nav>
+        <div class="menu-actions">
+          <div class="menu-lang" role="group" aria-label="Language">
+            <button class="lang-btn is-active" type="button" data-lang="ru">
+              RU
+            </button>
+            <button class="lang-btn" type="button" data-lang="en">EN</button>
+          </div>
+          <a class="btn btn-primary" href="https://pos.libiss.com" data-menu-close
+            data-i18n="cta.start"
+            >Перейти в POS</a
+          >
+          <a
+            class="btn btn-secondary"
+            href="https://shop.libiss.com"
+            data-menu-close
+            data-i18n="cta.tryPos"
+            >Онлайн-магазин</a
+          >
+        </div>
+      </aside>
+
+      <main>
+        <section class="hero snap-section">
+          <div class="container hero-grid">
+            <div class="animate">
+              <div class="page-title">Libiss</div>
+              <span class="pill-brand">Libiss</span>
+              <span class="pill" data-i18n="api.pill">Интеграции</span>
+              <h1 data-i18n="api.title">Public API</h1>
+              <p data-i18n="api.subtitle">
+                Сейчас подключения закрыты. Оставьте заявку, чтобы попасть в
+                список ожидания.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="mailto:support@libiss.com"
+                  data-i18n="api.cta"
+                  >Оставить заявку</a
+                >
+                <a class="btn btn-secondary" href="/"
+                  data-i18n="api.back"
+                  >На главную</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+

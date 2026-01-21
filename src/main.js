@@ -1,6 +1,25 @@
 import "./styles.css";
 import { translations } from "./translations";
 
+const loader = document.querySelector(".app-loader");
+document.body.classList.add("is-loading");
+
+const slowTimer = window.setTimeout(() => {
+  loader?.classList.add("slow");
+}, 1800);
+
+const fallbackTimer = window.setTimeout(() => {
+  loader?.classList.add("hide");
+  document.body.classList.remove("is-loading");
+}, 5000);
+
+window.addEventListener("load", () => {
+  window.clearTimeout(slowTimer);
+  window.clearTimeout(fallbackTimer);
+  loader?.classList.add("hide");
+  document.body.classList.remove("is-loading");
+});
+
 const i18nElements = document.querySelectorAll("[data-i18n]");
 const i18nAttrElements = document.querySelectorAll("[data-i18n-attr]");
 const langButtons = document.querySelectorAll("[data-lang]");

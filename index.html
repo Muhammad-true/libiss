@@ -21,6 +21,13 @@
     <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body>
+    <div class="app-loader" role="status" aria-live="polite">
+      <div class="loader-mark"></div>
+      <div class="loader-text" data-i18n="loader.title">Загрузка</div>
+      <div class="loader-subtext" data-i18n="loader.slow">
+        Медленное соединение, ждем...
+      </div>
+    </div>
     <div class="page">
       <header>
         <div class="container nav">
@@ -44,13 +51,11 @@
             <a href="https://pos.libiss.com" data-i18n="services.pos"
               >Для магазина</a
             >
-            <a href="https://admin.libiss.com" data-i18n="services.admin"
-              >Курьер</a
-            >
+            <a href="/courier.html" data-i18n="services.admin">Курьер</a>
             <a href="https://shop.libiss.com" data-i18n="services.shop"
               >Онлайн-магазин</a
             >
-            <a href="https://api.libiss.com">API</a>
+            <a href="/api.html">API</a>
           </nav>
           <div class="lang-toggle" role="group" aria-label="Language">
             <button class="lang-btn is-active" type="button" data-lang="ru">
@@ -58,22 +63,9 @@
             </button>
             <button class="lang-btn" type="button" data-lang="en">EN</button>
           </div>
-          <div class="nav-cta">
-            <a
-              class="btn btn-secondary"
-              href="https://shop.libiss.com"
-              data-i18n="cta.tryPos"
-              >Онлайн-магазин</a
-            >
-            <a class="btn btn-primary" href="https://pos.libiss.com"
-              data-i18n="cta.start"
-              >Перейти в POS</a
-            >
-          </div>
+          <div class="nav-cta"></div>
         </div>
       </header>
-
-      <div class="page-title">Libiss</div>
 
       <div class="menu-overlay" data-menu-close></div>
       <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
@@ -92,13 +84,16 @@
           <a href="https://pos.libiss.com" data-i18n="services.pos" data-menu-close
             >Для магазина</a
           >
-          <a href="https://admin.libiss.com" data-i18n="services.admin" data-menu-close
+          <a href="/courier.html" data-i18n="services.admin" data-menu-close
             >Курьер</a
           >
           <a href="https://shop.libiss.com" data-i18n="services.shop" data-menu-close
             >Онлайн-магазин</a
           >
-          <a href="https://api.libiss.com" data-menu-close>API</a>
+          <a href="/api.html" data-menu-close>API</a>
+          <a href="#support" data-i18n="menu.support" data-menu-close
+            >Служба поддержки</a
+          >
         </nav>
         <div class="menu-actions">
           <div class="menu-lang" role="group" aria-label="Language">
@@ -122,9 +117,10 @@
       </aside>
 
       <main>
-        <section class="hero">
+        <section class="hero snap-section">
           <div class="container hero-grid">
             <div class="animate">
+              <div class="page-title">Libiss</div>
               <span class="pill-brand">Libiss</span>
               <span class="pill" data-i18n="hero.pill"
                 >Полная экосистема ритейла</span
@@ -134,16 +130,7 @@
                 Libiss объединяет POS, склад, аналитику и онлайн-продажи в одну
                 экосистему.
               </p>
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="https://pos.libiss.com"
-                  data-i18n="cta.start"
-                  >Перейти в POS</a
-                >
-                <a class="btn btn-secondary" href="https://shop.libiss.com"
-                  data-i18n="cta.tryPos"
-                  >Онлайн-магазин</a
-                >
-              </div>
+              <div class="hero-actions"></div>
             </div>
             <div class="hero-card animate">
               <h3 data-i18n="hero.cardTitle">Навигация по платформе Libiss</h3>
@@ -165,7 +152,7 @@
                     <div>pos.libiss.com</div>
                   </div>
                 </a>
-                <a class="list-item" href="https://admin.libiss.com">
+                <a class="list-item" href="/courier.html">
                   <span class="icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none">
                       <path
@@ -180,7 +167,7 @@
                     <strong data-i18n="services.admin"
                       >Панель администратора</strong
                     >
-                    <div>admin.libiss.com</div>
+                    <div>libiss.com/courier</div>
                   </div>
                 </a>
                 <a class="list-item" href="https://shop.libiss.com">
@@ -200,7 +187,7 @@
                     <div>shop.libiss.com</div>
                   </div>
                 </a>
-                <a class="list-item" href="https://api.libiss.com">
+                <a class="list-item" href="/api.html">
                   <span class="icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none">
                       <path
@@ -214,7 +201,7 @@
                   </span>
                   <div>
                     <strong data-i18n="services.api">Публичный API</strong>
-                    <div>api.libiss.com</div>
+                    <div>libiss.com/api</div>
                     <div class="note" data-i18n="api.notice">
                       Сейчас подключения закрыты
                     </div>
@@ -225,7 +212,7 @@
           </div>
         </section>
 
-        <section>
+        <section class="snap-section">
           <div class="container">
             <h2 class="section-title" data-i18n="ecosystem.title">
               Обзор экосистемы
@@ -252,7 +239,7 @@
                   Быстрая касса, готовность к работе офлайн.
                 </p>
               </a>
-              <a class="card animate" href="https://admin.libiss.com">
+              <a class="card animate" href="/courier.html">
                 <span class="icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
                     <path
@@ -285,7 +272,7 @@
                   Современная витрина для вашего бренда.
                 </p>
               </a>
-              <a class="card animate" href="https://api.libiss.com">
+              <a class="card animate" href="/api.html">
                 <span class="icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
                     <path
@@ -309,7 +296,7 @@
           </div>
         </section>
 
-        <section>
+        <section class="snap-section">
           <div class="container">
             <h2 class="section-title" data-i18n="why.title">Почему Libiss</h2>
             <p class="section-subtitle" data-i18n="why.subtitle">
@@ -386,7 +373,7 @@
           </div>
         </section>
 
-        <section>
+        <section class="snap-section">
           <div class="container">
             <h2 class="section-title" data-i18n="for.title">Для кого</h2>
             <p class="section-subtitle" data-i18n="for.subtitle">
@@ -415,7 +402,7 @@
           </div>
         </section>
 
-        <section>
+        <section class="snap-section">
           <div class="container cta animate">
             <div>
               <h2 class="section-title" data-i18n="final.title">
@@ -425,15 +412,37 @@
                 Начните с нужного сервиса и масштабируйтесь.
               </p>
             </div>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="https://pos.libiss.com"
-                data-i18n="final.create"
-                >Перейти в POS</a
-              >
-              <a class="btn btn-secondary" href="https://shop.libiss.com"
-                data-i18n="final.demo"
-                >Онлайн-магазин</a
-              >
+            <div class="hero-actions"></div>
+          </div>
+        </section>
+
+        <section id="support" class="snap-section">
+          <div class="container">
+            <h2 class="section-title" data-i18n="support.title">
+              Служба поддержки
+            </h2>
+            <p class="section-subtitle" data-i18n="support.subtitle">
+              Короткие ответы на частые вопросы.
+            </p>
+            <div class="grid">
+              <div class="card animate">
+                <h4 data-i18n="support.q1">Как начать работу?</h4>
+                <p data-i18n="support.a1">
+                  Перейдите в POS и создайте магазин. Это занимает несколько минут.
+                </p>
+              </div>
+              <div class="card animate">
+                <h4 data-i18n="support.q2">Нужен ли интернет?</h4>
+                <p data-i18n="support.a2">
+                  Продажи работают офлайн, синхронизация выполнится при подключении.
+                </p>
+              </div>
+              <div class="card animate">
+                <h4 data-i18n="support.q3">Как подключить API?</h4>
+                <p data-i18n="support.a3">
+                  Сейчас подключения закрыты. Оставьте заявку в разделе API.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -445,10 +454,8 @@
             <a href="https://pos.libiss.com" data-i18n="services.pos"
               >Для магазина</a
             >
-            <a href="https://admin.libiss.com" data-i18n="services.admin"
-              >Курьер</a
-            >
-            <a href="https://api.libiss.com">API</a>
+            <a href="/courier.html" data-i18n="services.admin">Курьер</a>
+            <a href="/api.html">API</a>
             <a href="https://shop.libiss.com" data-i18n="footer.shop"
               >Онлайн-магазин</a
             >
@@ -458,6 +465,7 @@
             <a href="mailto:contact@libiss.com" data-i18n="footer.contact"
               >Контакты</a
             >
+            <a href="#support" data-i18n="menu.support">Служба поддержки</a>
           </div>
         </div>
       </footer>

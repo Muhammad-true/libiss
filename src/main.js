@@ -28,6 +28,11 @@ const setLanguage = (lang) => {
   const dictionary = translations[lang] || translations.ru;
   document.documentElement.lang = lang;
 
+  // Обновляем title страницы
+  if (dictionary["page.title"]) {
+    document.title = dictionary["page.title"];
+  }
+
   i18nElements.forEach((el) => {
     const key = el.dataset.i18n;
     if (dictionary[key]) {

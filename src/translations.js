@@ -54,7 +54,7 @@ export const translations = {
     "menu.support": "Служба поддержки",
     "courier.pill": "Сервис для курьеров",
     "courier.title": "Курьер",
-    "courier.subtitle": "Управление доставками, статусами и маршрутами в одном месте.",
+    "courier.subtitle": "Следите за новостями. Скоро мы начнем набирать курьеров — вакансии будут открыты.",
     "courier.cta": "Запросить доступ",
     "courier.back": "На главную",
     "courier.featuresTitle": "Возможности курьера",
@@ -77,7 +77,7 @@ export const translations = {
     "courier.support": "Служба поддержки",
     "api.pill": "Интеграции",
     "api.title": "Public API",
-    "api.subtitle": "Сейчас подключения закрыты. Оставьте заявку, чтобы попасть в список ожидания.",
+    "api.subtitle": "Сейчас мы не готовы сотрудничать. Следите за обновлениями.",
     "api.cta": "Оставить заявку",
     "api.back": "На главную",
     "loader.title": "Загрузка",
@@ -89,7 +89,8 @@ export const translations = {
     "support.q2": "Нужен ли интернет?",
     "support.a2": "Продажи работают офлайн, синхронизация выполнится при подключении.",
     "support.q3": "Как подключить API?",
-    "support.a3": "Сейчас подключения закрыты. Оставьте заявку в разделе API."
+    "support.a3": "Сейчас подключения закрыты. Оставьте заявку в разделе API.",
+    "page.title": "Libiss — Одна система. Вся ваша торговля."
   },
   en: {
     "cta.start": "Go to POS",
@@ -147,7 +148,7 @@ export const translations = {
     "menu.support": "Support",
     "courier.pill": "Courier service",
     "courier.title": "Courier",
-    "courier.subtitle": "Manage deliveries, statuses, and routes in one place.",
+    "courier.subtitle": "Stay tuned. We'll start hiring couriers soon — vacancies will be open.",
     "courier.cta": "Request access",
     "courier.back": "Back to home",
     "courier.featuresTitle": "Courier features",
@@ -170,7 +171,7 @@ export const translations = {
     "courier.support": "Support",
     "api.pill": "Integrations",
     "api.title": "Public API",
-    "api.subtitle": "API onboarding is currently closed. Join the waitlist.",
+    "api.subtitle": "We're not ready to collaborate right now. Stay tuned for updates.",
     "api.cta": "Join waitlist",
     "api.back": "Back to home",
     "loader.title": "Loading",
@@ -182,7 +183,8 @@ export const translations = {
     "support.q2": "Do I need internet?",
     "support.a2": "Sales work offline. Sync happens when you're online again.",
     "support.q3": "How do I connect the API?",
-    "support.a3": "API onboarding is closed. Join the waitlist in the API section."
+    "support.a3": "API onboarding is closed. Join the waitlist in the API section.",
+    "page.title": "Libiss — One system. All your retail."
   }
 };
 

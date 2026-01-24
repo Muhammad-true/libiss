@@ -133,6 +133,14 @@ svg {
 .page {
   background: var(--grad);
   min-height: 100vh;
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .container {
@@ -408,6 +416,19 @@ header {
   .nav-cta {
     display: none;
   }
+
+  footer.snap-section {
+    padding: 24px 0;
+    min-height: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-links {
+    gap: 12px;
+    font-size: 13px;
+  }
 }
 
 .lang-toggle {
@@ -646,6 +667,9 @@ footer {
   padding: 32px 0 80px;
   color: var(--muted);
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  min-height: auto;
 }
 
 .footer-links {
